@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Urban Company</title>
+    <script src="https://kit.fontawesome.com/cf90a6dd12.js" crossorigin="anonymous"></script>
+    <style>
+        body {
+            width: 85%;
+            margin: auto;
+        }
+
+        #topnavbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            /* box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px; */
+            border-bottom: 1px solid rgb(224, 216, 216);
+        }
+
+        #topnavbar #logo+div {
+            display: flex;
+            width: 20%;
+            justify-content: space-around;
+        }
+
+        #logo {
+            display: flex;
+            align-items: center;
+            width: 24%;
+            justify-content: space-around;
+        }
+
+        #logo img {
+            width: 110%;
+            height: 37px;
+        }
+
+        #topnavbar+div {
+            color: rgb(77, 74, 74);
+            font-size: 12px;
+            margin-top: 5px;
+        }
+
+        #productVideo {
+            display: flex;
+            justify-content: space-around;
+            margin-top: 30px;
+            border-bottom: 3px solid rgb(224, 216, 216);
+            padding-bottom: 30px;
+        }
+
+        #productVideo div:first-child {
+            width: 30%;
+            margin: auto;
+            margin-left: -1px;
+        }
+
+        #productVideo button {
+            border-radius: 10px;
+            padding: 7px 20px;
+            background-color: white;
+            border: 1px solid silver;
+            margin-bottom: -20px;
+
+        }
+
+        #productVideo div button img {
+            width: 15px;
+            height: 15px;
+        }
+
+        #productVideo div:last-child img {
+            border-radius: 10px;
+        }
+
+        #productVideo div:first-child h1 {
+            margin: 10px 0px;
+            font-size: 36px;
+        }
+
+        #productVideo div:last-child {
+            width: 60%;
+            /* margin: auto; */
+
+        }
+
+        #productfilterbar {
+            display: grid;
+            grid-template-columns: repeat(9, 1fr);
+            gap: 10px;
+            text-align: center;
+            width: 80%;
+            margin-top: 10px;
+            font-size: 13px;
+            height: 20%;
+            border-bottom: 1px solid rgb(224, 216, 216);
+            background-color: white;
+
+        }
+
+        #productfilterbar img {
+            width: 90%;
+            height: 43%;
+            border-radius: 12px;
+        }
+
+        #productAndCart {
+            display: flex;
+            border-top: 1px solid rgb(224, 216, 216);
+
+        }
+
+        #productpage {
+            width: 60%;
+           
+        }
+
+        #cartpage {
+            width: 40%;
+            border-left: 1px solid rgb(224, 216, 216);
+            padding-top: 30px;
+            height: 500px;
+          
+           
+
+        }
+
+        #cartpage div {
+            background-color: whitesmoke;
+            border-radius: 10px;
+            width: 80%;
+            margin-top: 15px;
+             float: right; 
+            padding: 10px 0px;
+            padding-left: 5px;
+        }
+
+        #cartpage div p {
+            margin-left: 10px;
+            margin-top: -1px;
+            margin-bottom: -1px;
+
+        }
+
+        #cartpage div p:last-child {
+            margin-bottom: -1px;
+            margin-top: -1px;
+            padding-left: 20px;
+            color: rgb(133, 125, 125);
+        }
+
+        #cartpage div:first-child i {
+            color: rgb(77, 77, 192);
+        }
+
+        #cartpage div i {
+            color: green;
+        }
+
+        .sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+           
+            
+        }
+         .sticky1{
+            position: fixed;
+             top: 70px; 
+            right: 70px;
+         }
+        .sticky+#productAndCart {
+            padding-top: 230px;
+
+        }
+
+        #video {
+            width: 100%;
+            /* border: 12px solid #f6f3f0; */
+            overflow: hidden;
+            top: -2;
+
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .active {
+            color: lime;
+            font-weight: 600;
+        }
+
+        section:last-of-type {
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- head top navbar -->
+    <div id="topnavbar">
+        <div id="logo">
+            <div> <img
+                    src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_category/images/supply/customer-app-supply/1648463875565-a4ce06.svg"
+                    alt="logo"></div>
+            <div>
+                <p>
+                    Delhi NCR <br>
+                    Connaught Place, New Delhi <i class="fa-solid fa-angle-down"></i>
+                </p>
+            </div>
+        </div>
+        <div>
+            <h4> Home</h4>
+            <h4> Bookings</h4>
+            <h4> Blog</h4>
+        </div>
+    </div>
+    <div> Home / Delhi NCR / Salon Prime in Delhi NCR</div>
+    <div id="productVideo">
+        <div>
+            <button><img
+                    src="https://icons.iconarchive.com/icons/icons8/windows-8/512/Security-Security-Checked-icon.png"
+                    alt=""> UC Safe</button>
+            <h1> Salon Prime </h1>
+            <p><i class="fa-solid fa-star"></i> 4.76 (978K)</p>
+        </div>
+        <div>
+            <video autoplay loop muted plays-inline id="video">
+                <source src="Video/womensalon.mp4" type="video/mp4">
+                </source>
+            </video>
+        </div>
+    </div>
+    <!-- productfilterbar -->
+
+    <div id="productfilterbar" class="">
+
+        <div>
+            <a href="#bestsellar"> <img
+                    src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/supply/customer-app-supply/1635313403372-16db5c.png"
+                    alt="">
+                <p> Bestsellar Package</p>
+            </a>
+        </div>
+        <div>
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/supply/customer-app-supply/1635313403372-16db5c.png"
+                alt="makeyourownpackage">
+            <p> Make your own package</p>
+        </div>
+        <div>
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/growth/luminosity/1655977998579-8de14b.png"
+                alt="Waxing">
+            <p> Waxing </p>
+        </div>
+        <div>
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/supply/customer-app-supply/1655287480435-d29c6c.png"
+                alt="Facial &cleanup">
+            <p> Facial & cleanup</p>
+        </div>
+        <div>
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/supply/customer-app-supply/1655287465245-e4dca0.png"
+                alt="Manicure">
+            <p> Manicure</p>
+        </div>
+        <div>
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/supply/customer-app-supply/1655287464682-7ab5c1.png"
+                alt="Pedicure">
+            <p> Pedicure</p>
+        </div>
+        <div>
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/supply/customer-app-supply/1655287464206-1f4ad4.png"
+                alt="Theading & face wax">
+            <p> Threading & face wax</p>
+        </div>
+        <div>
+            <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/supply/customer-app-supply/1655287480991-344026.png"
+                alt="">
+            <p> Bleach & detan</p>
+        </div>
+        <div> <a href="#haircolor">
+                <img src="https://res.cloudinary.com/urbanclap/image/upload/t_high_res_template,q_auto:low,f_auto/images/supply/customer-app-supply/1655287475795-1630ef.png"
+                    alt="">
+                <p> Hair colour & care</p>
+            </a>
+        </div>
+
+    </div>
+
+    <!-- productpage && cart page  -->
+    <div id="productAndCart">
+        <div id="productpage">
+            <selection name="" id="bestseller">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Numquam eveniet a ullam tempore quis, neque
+                placeat sequi animi autem porro, iste necessitatibus quas. Nihil dolorem nemo delectus saepe praesentium
+                quibusdam iusto odit, magnam qui ratione nobis asperiores aspernatur facilis, impedit ab adipisci ipsum
+                quis suscipit at obcaecati laboriosam, placeat nam veniam. Ullam quis fugit at velit quod et ducimus
+                ipsum a qui expedita exercitationem blanditiis sapiente omnis, itaque dolorem dolorum optio assumenda.
+                Est, minima voluptas beatae reiciendis laboriosam optio! Provident non voluptatum quasi mollitia eaque
+                dolorem perferendis, tempore at minus aliquid rerum, quod repellendus fugit officiis tempora laborum vel
+                a fuga voluptate ipsa tenetur accusantium minima et fugiat? Sequi, accusamus. Eveniet hic repellat
+                nobis. Explicabo, magnam, repudiandae quibusdam voluptate nihil similique ducimus natus voluptatibus
+                deserunt dignissimos cum doloribus a, error voluptatem iste dolorum omnis praesentium pariatur laborum
+                asperiores illo. Voluptatem laborum iste provident inventore dicta eaque. Commodi molestiae nulla
+                mollitia aut tenetur, enim assumenda debitis sunt dolorem expedita, voluptatem qui. Consequatur eveniet
+                nisi, quam voluptatum vero commodi quaerat hic! Quasi esse eum deserunt debitis. Provident odio quo,
+                dolore suscipit blanditiis dolor? Reiciendis veniam maiores aperiam, tenetur ullam expedita adipisci?
+                Neque veritatis rem praesentium libero debitis perferendis culpa hic dolor itaque quod, nesciunt dolore
+                non reprehenderit eum, incidunt ut vitae harum blanditiis delectus suscipit atque! Aliquid, delectus
+                suscipit natus autem iste assumenda eum dolorum quasi minus amet culpa consectetur voluptatem quod?
+                Atque praesentium blanditiis accusantium non alias est, ratione dignissimos vel delectus maiores saepe
+                rerum? Similique soluta perferendis cum dignissimos, aspernatur facere magni corrupti adipisci deleniti
+                veritatis et velit tempora minus quis sed fugiat dolore excepturi officiis! Voluptatibus fugit quas
+                mollitia quia corrupti doloremque velit tenetur repellendus possimus voluptate doloribus tempore nihil
+                quo, facere, veniam minus, obcaecati ratione laudantium quod asperiores inventore? Recusandae itaque
+                dolor cum quo ipsa placeat quisquam harum officiis at, ea minima rerum quas qui maxime vero amet
+                pariatur exercitationem sit, ullam veritatis similique adipisci. Architecto quam rem minima deserunt
+                consectetur recusandae quaerat praesentium hic! Libero aliquid quia molestiae necessitatibus,
+                reprehenderit reiciendis, error corrupti consequatur ut recusandae veniam, omnis voluptatum natus amet
+                modi repellat non facere commodi rem excepturi unde tempora ipsa. Commodi voluptas, dolores aliquid
+                ratione expedita, quo quam doloribus dignissimos minus earum ducimus quae explicabo ipsum? Repellat,
+                inventore sapiente impedit et nam qui voluptate totam ipsa repudiandae eum ipsam adipisci laudantium
+                magni minima facilis architecto cupiditate nesciunt eos nulla dolorum beatae. Minus iure hic libero
+                dolore ab perspiciatis doloremque, architecto assumenda? Sed perferendis labore nihil obcaecati illo
+                pariatur dolores quisquam quod ratione amet fugiat corporis ipsa unde adipisci, quaerat hic neque,
+                debitis cumque, autem tempore? Temporibus dolor aliquam totam veniam. Accusamus ut molestias iste non
+                aut dolorum voluptas error animi aperiam, nisi impedit optio. Commodi autem itaque, adipisci veniam
+                doloribus fugiat id provident laboriosam dolorum impedit quod numquam placeat neque harum corporis
+                explicabo quisquam! Quos, facere. Ex, explicabo expedita? Neque repellat suscipit commodi. Veniam,
+                adipisci sed culpa maxime quos inventore odit dolorem, sit unde nulla ducimus exercitationem maiores id
+                fuga sequi harum. Harum odio quis amet mollitia numquam nisi sapiente temporibus eveniet voluptatibus
+                esse quisquam, unde labore sint, atque, assumenda nulla. Excepturi consequuntur mollitia ipsum facilis
+                explicabo ut, molestiae pariatur repellat. Consequuntur corporis ipsa commodi aliquam, quaerat assumenda
+                minima illo possimus error cum et quod dicta enim sed eius iusto quae voluptatibus optio iure doloribus?
+                Cumque, ea optio? Totam fuga necessitatibus magni reiciendis, quia nesciunt perspiciatis recusandae?
+                Explicabo deleniti accusamus nulla dignissimos. Rem, maxime neque officia, rerum ut laudantium dolor
+                porro similique et vero molestiae quod eos reprehenderit beatae consequuntur qui veniam tempore, eaque
+                nam libero? Similique ab quidem, nihil odit soluta maiores repudiandae cumque, quasi neque aperiam illo
+                voluptates temporibus voluptatibus labore! Amet dolorem quod maxime quae eos, incidunt vitae, ducimus,
+                porro distinctio inventore cumque veniam. Placeat, tempore? Earum neque, similique aperiam ut quod
+                molestiae modi beatae minus aut id? Dolore inventore quaerat quibusdam qui optio asperiores dignissimos
+                odit, iure exercitationem quasi eos, natus ullam. Porro ratione molestiae mollitia at eligendi vel,
+                iusto atque illo dolorum dolores repudiandae labore tempora! Voluptatibus repellendus doloribus deleniti
+                provident aliquid veritatis neque repellat esse beatae, nesciunt, consequuntur non sint repudiandae.
+                Ducimus iusto totam cum nihil, fuga maiores ipsa quaerat voluptatibus, illum modi corrupti praesentium
+                ex ullam repellat. Excepturi recusandae nostrum debitis aperiam voluptatum rerum tenetur sequi optio
+                accusamus consectetur pariatur temporibus at omnis ipsum earum commodi non, distinctio repudiandae
+                doloremque, ex culpa. Libero nobis vel voluptatem incidunt, veniam deserunt aut unde quibusdam magni
+                dolor quas corporis rem perspiciatis sed perferendis delectus. Debitis accusamus impedit saepe error
+                aliquam blanditiis voluptate? Fugit quae illo voluptates ipsa iste sed velit non asperiores laudantium,
+                nemo cumque est officia? Labore quidem dolore sunt fugiat porro soluta velit pariatur laboriosam, eum
+                eveniet sequi molestias voluptatum odio fuga numquam libero ipsam unde ratione! Officia dolore voluptas
+                facilis voluptatibus tenetur, consectetur temporibus, mollitia aliquam molestias, accusamus expedita
+                iusto nulla. Molestiae neque quas aut dignissimos dolor nemo beatae, consequuntur ipsam. Obcaecati ipsam
+                illo corporis modi ab repellendus perferendis provident optio aliquid velit, commodi rem laudantium,
+                similique, laboriosam quis? Quod earum, corrupti dignissimos, quidem totam perferendis laboriosam
+                tempore ut distinctio itaque similique perspiciatis voluptatibus harum enim reprehenderit non iusto
+                cupiditate, pariatur vitae dolorem sit officiis ullam quibusdam delectus. Vitae, accusantium! Alias
+                necessitatibus voluptatum optio non repudiandae impedit eveniet nam ea perspiciatis amet nisi quo odio
+                inventore nobis minima dicta, possimus repellendus sed temporibus. Placeat sequi explicabo blanditiis
+                tempora ea ex exercitationem. Esse, deleniti omnis accusamus nobis quibusdam rem. Quis deleniti rerum et
+                ipsa quibusdam delectus aspernatur aliquam quasi libero debitis eaque autem, veniam dicta nostrum
+                reiciendis possimus, pariatur, quod neque ex omnis. Rerum molestias obcaecati est eos magni atque
+                accusamus? Quos repudiandae magni ut quas dicta blanditiis in sint necessitatibus fugit odit, expedita
+                nobis provident omnis ex, deserunt quis officia iste ducimus adipisci! Ab, corporis optio quia adipisci
+                perspiciatis, quasi aliquid quas eveniet possimus praesentium dolore dignissimos. Repellat officiis
+                officia harum ad minus quidem tempora. Expedita pariatur voluptatibus velit itaque placeat repellat
+                inventore quasi? Aut veritatis quo dignissimos nihil, non quaerat odit ipsam voluptatum doloremque
+                nostrum illum perspiciatis necessitatibus? Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Velit suscipit repudiandae neque unde repellat quae quia nesciunt deleniti dignissimos aliquam magni
+                debitis magnam fuga alias recusandae consequuntur voluptate, officia non? Corporis, repudiandae quisquam
+                asperiores laboriosam veniam earum sapiente magnam officiis error blanditiis est, sed aliquid maiores
+                odit mollitia aliquam optio consectetur. Doloribus, labore asperiores fugiat, veniam suscipit, ducimus
+                quibusdam porro inventore nihil laborum a dolorem voluptates omnis est reiciendis enim odio! Nam,
+                beatae! Fuga, iure magni. Incidunt eos sed fugit commodi eum porro sit officia, beatae voluptatum
+                exercitationem tempora quae fugiat amet quisquam? Architecto ad repudiandae suscipit saepe, sunt
+                quaerat?
+            </selection>
+            <selection name="" id="haircolor">
+                <h1> Hair colour</h1>
+                <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit, atque quisquam. Nobis vero
+                    repudiandae ad quasi exercitationem iure provident ratione nesciunt a voluptate magnam, saepe
+                    deserunt molestiae rerum natus cumque impedit porro. Pariatur sed fugiat, cupiditate a distinctio
+                    expmpore soluta qui corporis dolores temporibus incidunt quaerat
+                    mollitia eius? Itaque, nostrum cupiditate! Blanditiis recusandae officia quos beatae eius iusto
+                    asperiores volbis mollitivoluptatem a saepe rem assumenda repellendus soluta qui
+                    repellat veniam dolor quae ipsam natus non necessitatibus molestiae, error quasi odit quaerat illo
+                    consequatur sequi! Fugiat error similique saepe deleniti, aut, possimus totam dolorum deserunt
+                    explicabo, eaque ab recusandae molestiae.</p>
+            </selection>
+        </div>
+
+        <div id="cartpage">
+            <div>
+                <p> <i class="fa-solid fa-star"></i> Save 15% on every order</p>
+                <p> Get Plus now</p>
+            </div>
+            <div>
+                <p><i class="fa-solid fa-tag"></i> Upto 200 cashback</p>
+                <p> on Amazon Pay</p>
+            </div>
+            <div>
+                <p> <i class="fa-solid fa-tag"></i> 5% Simpl cashback up to 750</p>
+                <p>Pay via Simpl</p>
+            </div>
+            <div>
+                <p> <i class="fa-solid fa-tag"></i> Assured Cashback</p>
+                <p>Upto 500 off </p>
+            </div>
+            <div>
+                <p> <i class="fa-solid fa-tag"></i> Get upto 500 cashback </p>
+                <p> Valid on Mobiwik Wallet</p>
+
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
+<script>
+    window.onscroll = function () { myFunction() };
+
+    var header = document.getElementById("productfilterbar");
+    var sticky = header.offsetTop;
+
+    function myFunction() {
+        if (window.pageYOffset > sticky) {
+            header.classList.add("sticky");
+        } else {
+            header.classList.remove("sticky");
+        }
+    }
+    // second
+//     window.onscroll = function () { myFunction1() };
+
+// var header1 = document.getElementById("cartpage");
+// var sticky1 = header1.offsetTop;
+
+// function myFunction1() {
+//     if (window.pageYOffset > sticky1) {
+//         header1.classList.add("sticky1");
+//     } else {
+//         header1.classList.remove("sticky1");
+//     }
+// }
+    //product scroll
+    const sections = document.querySelectorAll("section[id]");
+    window.addEventListener("scroll", navHighlighter);
+    function navHighlighter() {
+        let scrollY = window.pageYOffset;
+        sections.forEach(current => {
+            const sectionHeight = current.offsetHeight;
+            const sectionTop = (current.getBoundingClientRect().top + window.pageYOffset) - 50;
+            sectionId = current.getAttribute("id");
+            if (
+                scrollY > sectionTop && scrollY <= sectionTop + sectionHeight
+            ) {
+                document.querySelector(".navbar a[href*=" + sectionId + "]").classList.add("active");
+            } else {
+                document.querySelector(".navbar a[href*=" + sectionId + "]").classList.remove("active");
+            }
+        });
+    }
+</script>
