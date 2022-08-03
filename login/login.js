@@ -2,7 +2,7 @@
 //popup start 
 function openForm() {
     document.getElementById("myForm").style.display = "block";
-    myWindow.focus();
+   
   }
   
   function closeForm() {
@@ -13,9 +13,11 @@ function openForm() {
     if( mb.length!=0){
       event.preventDefault();
         document.getElementById("otpform").style.display = "block";
-        myWindow.focus();
+        var full= document.getElementById("phonenumber").value;
+        document.getElementById("number").innerText="We have sent you a 4 digit OTP on " +full+" edit";
       
     }
   
   }
+
   
