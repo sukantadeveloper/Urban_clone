@@ -251,3 +251,6 @@ font-weight:bold;
 #waxingflex+div h3{
     color:blueviolet;
 }
+ html{
+    scroll-behavior: smooth;
+}  
