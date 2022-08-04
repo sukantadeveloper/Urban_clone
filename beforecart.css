@@ -34,7 +34,7 @@ hr {
 #topnav > :first-child > img {
   width: 18%;
   margin-top: 50px;
-  margin-left: 5%;
+  /* margin-left: 5%; */
 }
 #leftArrow {
   width: 20px;
@@ -181,6 +181,9 @@ h1 {
   justify-content: space-between;
   margin-bottom: -10px;
 }
+#parent > div > :last-child {
+  font-size: 15px;
+}
 
 /* **********HAPPY MEMBERS******** */
 /* #members {
@@ -300,7 +303,10 @@ h1 {
   margin-top: 30px;
   color: #8a1e08;
   text-align: center;
-  font-size: 18px;
+  font-size: 20px;
+}
+#sidebar > a:last-of-type {
+  text-decoration: none;
 }
 
 /* *******Procced Button ********** */

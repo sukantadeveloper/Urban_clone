@@ -276,7 +276,9 @@
           <button id="plan2">Add</button>
         </div>
 
-        <p id="membership">No, I don't want membership</p>
+        <a href="cartpage.html">
+          <p id="membership">No, I don't want membership</p></a
+        >
         <hr />
       </div>
     </div>
@@ -293,102 +295,4 @@
     </div>
   </body>
 </html>
-<script>
-  document.getElementById("flex1").addEventListener("click", p1);
-  var clickforp1 = 0;
-  var clickforp2 = 0;
-  var clickforp3 = 0;
-  var clickforp4 = 0;
-  var clickforp5 = 0;
-  var clickforp6 = 0;
-  var clickforp7 = 0;
-  var clickforp8 = 0;
-  var clickforp9 = 0;
-
-  function p1() {
-    if (clickforp1 == 0) {
-      document.getElementById("p1").innerText =
-        "Plus members save 15% on every order. Additionally, they get access to top-rated Plus professionals. UC Plus professionals are a curated set of professionals who are top-rated, specially trained, and experts in their field. UC Plus members also get discounts up to *150. The fee for repairs will be charged as per actuals.";
-      clickforp1++;
-    } else {
-      document.getElementById("p1").innerText = "";
-      clickforp1--;
-    }
-  }
-
-  document.getElementById("flex2").addEventListener("click", p2);
-  function p2() {
-    document.getElementById("p2").innerText =
-      " if a subscriber saves less than the membership price at the end of the membership period, he/she will automatically get a refund worth members price - total discount availed as UC cash can be used while booking any service across any category";
-  }
-  document.getElementById("flex3").addEventListener("click", p3);
-
-  function p3() {
-    document.getElementById("p3").innerText =
-      "Yes, maximum discount per transaction is limited to ₹150 ";
-  }
-  document.getElementById("flex4").addEventListener("click", p4);
-  function p4() {
-    document.getElementById("p4").innerText =
-      "No, there's no number of transactions under the membership. But as per our fair usage policy. the total discount you can avail is limited to 7 times the membership price.";
-  }
-  document.getElementById("flex5").addEventListener("click", p5);
-  function p5() {
-    document.getElementById("p5").innerText =
-      "Yes, as per our fair usage policy, the total discount you can avail is limited to 7 times the membership price you paid";
-  }
-  document.getElementById("flex6").addEventListener("click", p6);
-  function p6() {
-    document.getElementById("p6").innerText =
-      "UC Plus professionals are a curated set of professionals who are top-rated, specially trained, and experts in their field.";
-  }
-  document.getElementById("flex7").addEventListener("click", p7);
-  function p7() {
-    document.getElementById("p7").innerText =
-      "Membership can only be bought by paying online. For all the subsequent bookings, you have the option of paying in cash or online";
-  }
-  document.getElementById("flex8").addEventListener("click", p8);
-  function p8() {
-    document.getElementById("p8").innerText =
-      "No, the membership cannot be cancelled or transferred";
-  }
-  document.getElementById("flex9").addEventListener("click", p9);
-  function p9() {
-    document.getElementById("p9").innerText =
-      "No Membership discount is applicable only on services booked via UC app and not on any extra services taken directly from the professional";
-  }
-
-  // ***********Estimated Saving********
-
-  document.getElementById("two").addEventListener("click", two);
-  document.getElementById("four").addEventListener("click", four);
-  document.getElementById("six").addEventListener("click", six);
-  document.getElementById("eight").addEventListener("click", eight);
-  document.getElementById("ten").addEventListener("click", ten);
-  document.getElementById("twelve").addEventListener("click", twelve);
-
-  function two() {
-    document.querySelector("h1").innerText = "₹288";
-  }
-  function four() {
-    document.querySelector("h1").innerText = "₹576";
-  }
-  function six() {
-    document.querySelector("h1").innerText = "₹864";
-  }
-  function eight() {
-    document.querySelector("h1").innerText = "₹1152";
-  }
-  function ten() {
-    document.querySelector("h1").innerText = "₹1440";
-  }
-  function twelve() {
-    document.querySelector("h1").innerText = "₹1728";
-  }
-
-  document.getElementById("total").innerText =
-    "₹" + (localStorage.getItem("totalvalue") || 0);
-
-  document.getElementById("sprice").innerText =
-    "₹" + (parseInt(localStorage.getItem("totalvalue")) - 150);
-</script>
+<script src="beforecart.js"></script>
