@@ -1,12 +1,15 @@
 
   var cartpage = JSON.parse(localStorage.getItem("items")) || [];
   var total=0;
+  var quantity = 1;
+  var totfinal=0;
   displaydata(cartpage);
 
   displayprice(cartpage);
 
   function displaydata(cp) {
-    cp.map(function (elem) {
+    document.getElementById("container").innerText="";
+    cp.map(function (elem,index) {
       var namediv = document.createElement("div");
       namediv.setAttribute("id", "namediv");
       var name = document.createElement("h5");
@@ -21,7 +24,7 @@
       var hr = document.createElement("hr");
       name.innerText = elem.name;
       plus.innerText = "+";
-      num.innerText = "1";
+      num.innerText = quantity;
       minus.innerText = "-";
       price.innerText = "₹" + elem.price;
       console.log(elem.strikeprice);
@@ -31,7 +34,14 @@
       pricediv.append(plusminusdiv, divforprice);
       plusminusdiv.setAttribute("id", "price");
       namediv.append(name, pricediv);
+      // quantity plus and minus
+      plus.addEventListener("click",function(){
+        plusItem(elem,num);
+      })
 
+      minus.addEventListener("click",function(){
+        minusItem(elem,num,index);
+      })
       var seconddiv = document.createElement("div");
       seconddiv.setAttribute("id", "list");
 
@@ -81,10 +91,11 @@
   }
 
 function displayprice(dp){
+  total=0;
   dp.map(function(elem){
    total=parseInt(total)+parseInt(elem.price);
   })
-
+  localStorage.setItem("totalvalue",total);
   document.getElementById("total").innerText="₹"+total;
 
   var discount=-50;
@@ -95,4 +106,96 @@ function displayprice(dp){
 
   var tfinal=((parseInt(total)-parseInt(discount))+parseInt(fee));
   document.getElementById("totalfinal").innerText="₹"+tfinal;
+
+  ////imp
+  totfinal=tfinal;
 }
+
+
+
+function plusItem(elem, num) {
+  console.log(elem);
+  var quant=num.innerText;
+  quant++;
+  var tot = localStorage.getItem("totalvalue");
+  tot = parseInt(tot) + parseInt(elem.price);
+  localStorage.setItem("totalvalue", tot);
+  num.innerText =  quant;
+  document.getElementById("total").innerText = localStorage.getItem("totalvalue");
+
+  var discount=-50;
+  document.getElementById("discount").innerText="₹"+discount;
+
+  var fee=49;
+  document.getElementById("confee").innerText="₹"+fee;
+
+  var tfinal=((parseInt(tot)-parseInt(discount))+parseInt(fee));
+  document.getElementById("totalfinal").innerText="₹"+tfinal;
+  //////imp
+  totfinal=tfinal;
+ 
+}
+
+function minusItem(elem, num,index) {
+  console.log(elem);
+  var quant=num.innerText;
+  quant--;
+  if (quant >=1) {
+    var tot = localStorage.getItem("totalvalue");
+    tot = parseInt(tot) - parseInt(elem.price);
+    localStorage.setItem("totalvalue", tot);
+    num.innerText =  quant;
+    document.getElementById("total").innerText = localStorage.getItem("totalvalue");
+  
+    var discount=-50;
+    document.getElementById("discount").innerText="₹"+discount;
+  
+    var fee=49;
+    document.getElementById("confee").innerText="₹"+fee;
+  
+    var tfinal=((parseInt(tot)-parseInt(discount))+parseInt(fee));
+    document.getElementById("totalfinal").innerText="₹"+tfinal;
+    //////imp
+    totfinal=tfinal;
+  }else if(quant==0){
+    removefromcart(elem,index);
+  }
+}
+
+
+  function removefromcart(elem, index) {
+    cartpage.splice(index, 1);
+    console.log(elem);
+    var tot = localStorage.getItem("totalvalue");
+    tot = parseInt(tot) - parseInt(elem.price);
+    localStorage.setItem("totalvalue", tot);
+    // num.innerText =  quant;
+    document.getElementById("total").innerText = localStorage.getItem("totalvalue");
+  
+    var discount=-50;
+    document.getElementById("discount").innerText="₹"+discount;
+  
+    var fee=49;
+    document.getElementById("confee").innerText="₹"+fee;
+  
+    var tfinal=((parseInt(tot)-parseInt(discount))+parseInt(fee));
+    document.getElementById("totalfinal").innerText="₹"+tfinal;
+    //////imp
+    totfinal=tfinal;
+
+    // var tot = localStorage.getItem("total");
+    // tot = tot - elem.price;
+    // localStorage.setItem("total", tot);
+    localStorage.setItem("items", JSON.stringify(cartpage));
+    displaydata(cartpage);
+
+    displayprice(cartpage);
+  }
+
+
+
+  // *****Proceed to pay ********
+  document.getElementById("OrderPlace").addEventListener("click",proceed);
+  function proceed(){
+    localStorage.setItem("totalvalue",totfinal);
+  }

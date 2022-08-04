@@ -295,10 +295,25 @@
 </html>
 <script>
   document.getElementById("flex1").addEventListener("click", p1);
+  var clickforp1 = 0;
+  var clickforp2 = 0;
+  var clickforp3 = 0;
+  var clickforp4 = 0;
+  var clickforp5 = 0;
+  var clickforp6 = 0;
+  var clickforp7 = 0;
+  var clickforp8 = 0;
+  var clickforp9 = 0;
 
   function p1() {
-    document.getElementById("p1").innerText =
-      "Plus members save 15% on every order. Additionally, they get access to top-rated Plus professionals. UC Plus professionals are a curated set of professionals who are top-rated, specially trained, and experts in their field. UC Plus members also get discounts up to *150. The fee for repairs will be charged as per actuals.";
+    if (clickforp1 == 0) {
+      document.getElementById("p1").innerText =
+        "Plus members save 15% on every order. Additionally, they get access to top-rated Plus professionals. UC Plus professionals are a curated set of professionals who are top-rated, specially trained, and experts in their field. UC Plus members also get discounts up to *150. The fee for repairs will be charged as per actuals.";
+      clickforp1++;
+    } else {
+      document.getElementById("p1").innerText = "";
+      clickforp1--;
+    }
   }
 
   document.getElementById("flex2").addEventListener("click", p2);
