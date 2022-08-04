@@ -1,5 +1,6 @@
 body{
     margin: 0;
+    padding: 0;
 }
 
 #background_img { 
@@ -8,37 +9,47 @@ background-blend-mode: darken;
 background-size: cover;
 height: 700px;
 width: 100%;
+margin-top: -25px;
+/* background-position: center top; */
 
 }
 
 #top_nav{
    display: flex;
+   justify-content: space-between;
+  align-items: center;
+  /* border: 1px solid black; */
+  margin: 20px;
 }
 
 .options a {
     color: white;
 }
-
-
-#company_name{
-    margin-left: 5% ;
-   
+#top_nav>:first-child{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
+/* #company_name{
+   
+   
+} */
+
 .options{
+    justify-content: flex-start;
     display: flex;
-    margin-top: 2%;
-    margin-left: 60%;
-    width: 35%;
-    margin-right: 5%;
+    /* margin-top: 2%;
+    margin-left: 60%; */
+    /* width: 35%; */
+    /* margin-right: 5%; */
     color: white;
    }
 
 #background_img img{
     height: 40px;
     width: 40px;
-    margin: 40%;
-    margin-left: 200%;
+   
 }
 
 
@@ -48,6 +59,7 @@ width: 100%;
 position: absolute;
 margin-top: 9%;
 margin-left: 45%;
+text-align: center;
 
 }
 
@@ -59,7 +71,7 @@ font-size: 15px;
     color: white ; 
     font-size:70px ;
     margin-top: 10%;
-    margin-left: 25%;
+    text-align: center;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
   
 }
@@ -76,7 +88,7 @@ font-size: 15px;
         justify-content: space-around;
       border-radius: 10px;
       border-color: white;
-      margin-left: 20%;
+      /* margin-left: 20%; */
       
       
       
@@ -100,11 +112,14 @@ font-size: 15px;
     .location_search{
     display: flex;
     width: 80%;
-    justify-content:space-between;
+    margin: auto;
+    justify-content:center;
     margin-top: -20px;
+    gap: 10px;
     }
 .location_search form{
     display: flex;
+    align-items: center;
     width: 60%;
     background-color: white;
     border-radius: 10px;
@@ -143,12 +158,14 @@ font-size: 15px;
     display: grid;
     grid-template-columns: repeat(5,1fr);
    height: 25%;
-   margin:3% 20%;
+   /* margin:3% 20%; */
+   margin: auto;
    width: 60%;
     background-color: white;
     box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
     border-radius: 5px ;
     margin-bottom: 5%;
+    margin-top: 7%;
 }
 .button_1{
    
