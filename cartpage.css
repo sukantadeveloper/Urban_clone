@@ -156,3 +156,6 @@ hr {
   padding: 10px;
   color: rgb(9, 95, 60);
 }
+body > a:last-of-type {
+  text-decoration: none;
+}
