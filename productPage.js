@@ -1071,6 +1071,9 @@ function navHighlighter() {
   });
 }
 
+if(total>0){
+  totalprice();
+}
 function addToCart(elem){
   console.log(elem);
   cartpage.push(elem);

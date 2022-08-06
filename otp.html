@@ -74,7 +74,8 @@
     event.preventDefault();
     var number = document.getElementById("otp").value;
     if (number.length == 4) {
-      window.location.href = "index.html";
+      alert("Payment Done");
+      window.location.href = "orderdone.html";
     } else {
       alert("Wrong Otp");
     }
