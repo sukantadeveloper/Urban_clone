@@ -17,6 +17,8 @@
   document.getElementById("ten").addEventListener("click", ten);
   document.getElementById("twelve").addEventListener("click", twelve);
 
+
+
   var clickforp1 = 0;
   var clickforp2 = 0;
   var clickforp3 = 0;
