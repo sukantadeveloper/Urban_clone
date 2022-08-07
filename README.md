@@ -10,7 +10,7 @@ These are the Screen captures of our clone website.
 
 ![image](https://user-images.githubusercontent.com/81805096/183247596-af4872a0-a86f-4160-9bbc-c8b580014757.png)
 
-## Header of landing page.
+## Footer of landing page.
 
 
 ![image](https://user-images.githubusercontent.com/81805096/183247699-5caad96a-27e5-4fa7-82b6-7c78bd0f7ba9.png)
