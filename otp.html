@@ -75,7 +75,10 @@
     var number = document.getElementById("otp").value;
     if (number.length == 4) {
       alert("Payment Done");
-      window.location.href = "orderdone.html";
+      var arr = [];
+      localStorage.setItem("items", JSON.stringify(arr));
+      localStorage.setItem("totalvalue", 0);
+      window.location.href = "index.html";
     } else {
       alert("Wrong Otp");
     }

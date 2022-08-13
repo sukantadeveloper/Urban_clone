@@ -159,3 +159,6 @@ hr {
 body > a:last-of-type {
   text-decoration: none;
 }
+html {
+  scroll-behavior: smooth;
+}
